@@ -4,24 +4,31 @@
              x:Class="GeradorDeImagem.MainPage"
              Shell.NavBarIsVisible="False">
 
-    <ScrollView>
-        <VerticalStackLayout
+    <ScrollView BackgroundColor="#babce0">
+        <StackLayout Orientation="Vertical"
             Padding="30,0"
             Spacing="25"
             VerticalOptions="Center">
            <Label Text="Olá, seja bem vindo(a) ao Gerador de Imagens"
-                   HorizontalOptions="Center"/>
+                   HorizontalOptions="Center"
+                   VerticalOptions="StartAndExpand"
+                   FontSize="22"
+                   FontAttributes="Bold"/>
            <Button Text="Gerar"
-                   Clicked="Button_Clickedcd"
+                   Clicked="GerarButtonIsClicked"
                    HorizontalOptions="Center"
                    BackgroundColor="Pink"
-                   CornerRadius="25"/>
+                   CornerRadius="15"/>
            <Image x:Name="imageMsg"
                  Aspect="AspectFill"
                  Source="vacalo.jpg"
-                  HeightRequest="300"
-                  WidthRequest="200" />                
-        </VerticalStackLayout>
+                 VerticalOptions="CenterAndExpand"/>     
+            <Button Text="COMPARTILHAR"
+                   Clicked="ShareButtonIsClicked"
+                   HorizontalOptions="Center"
+                   BackgroundColor="Pink"
+                   CornerRadius="15"/>           
+        </StackLayout>
     </ScrollView>
 
 </ContentPage>
